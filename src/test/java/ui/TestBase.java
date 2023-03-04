@@ -43,7 +43,7 @@ public class TestBase {
         Configuration.browserCapabilities = new DesiredCapabilities();
         Configuration.browserSize = "695x1980";
         Configuration.headless = false;
-
+        Configuration.browser = "chrome";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
