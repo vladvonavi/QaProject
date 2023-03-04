@@ -8,7 +8,7 @@ public class SeleniumTest {
 
     @Test
     void seleniumTest(){
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromeriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://ya.ru/");
     }

@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import ui.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -20,7 +21,7 @@ import static steps.UiSteps.*;
 
 @ExtendWith(AllureJunit5.class)
 @DisplayName("Проверка страницы пользователя")
-public class SelenideTest {
+public class SelenideTest extends TestBase {
 
     String url = "https://demoqa.com/automation-practice-form";
     String firstName = "Vlad";
@@ -33,18 +34,18 @@ public class SelenideTest {
     String month = "January";
     String picAddress = "src/test/resources/pic.jpg";
 
-    @BeforeEach
-    public void preConditions(){
-        //Configuration.browserSize = "1920x1080";
-        Configuration.browserSize = "695x1980";
-        Configuration.headless = false;
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
+//    @BeforeEach
+//    public void preConditions(){
+//        //Configuration.browserSize = "1920x1080";
+//        Configuration.browserSize = "695x1980";
+//        Configuration.headless = false;
+//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+//    }
 
-    @AfterEach
-    public void postConditions(){
-        step("Закрываем браузер", Selenide::closeWebDriver);
-    }
+//    @AfterEach
+//    public void postConditions(){
+//        step("Закрываем браузер", Selenide::closeWebDriver);
+//    }
 
     @SneakyThrows
     @Test
