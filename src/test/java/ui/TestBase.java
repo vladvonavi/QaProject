@@ -45,7 +45,7 @@ public class TestBase {
     public static void preConditions() {
         Configuration.browserCapabilities = new DesiredCapabilities();
         Configuration.browserSize = "695x1980";
-        Configuration.headless = false;
+        Configuration.headless = true;
         Configuration.browser = "chrome";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
